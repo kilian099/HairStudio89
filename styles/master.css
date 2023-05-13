@@ -25,9 +25,9 @@
     margin: 0 auto;
 }
 .logo__container{
-    width: 240px;
-    top: 4%;
-    left: 5%;
+    width: 340px;
+    top: 20%;
+    left: 20%;
     cursor: pointer;
     position: absolute;
 }
@@ -91,24 +91,50 @@
 }
 
 #nav-icon{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: #33200e;
     text-align: center;
     position: fixed;
-    right: 30px;
-    top:20px;
-    border-radius: 200px;
+    right: 50px;
+    top:50px;
+    border-radius: 210px;
     z-index: 3;
     cursor: pointer;
+    -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
 }
 
 #nav-icon img{
-    width: 30px;
-    margin-top: 10px;
+    width: 25px;
+    margin-top: 9px;
 }
 
-
+@-webkit-keyframes glowing {
+    0% { background-color: #532405; -webkit-box-shadow: 0 0 3px #ffffff; }
+    50% { background-color: #cbc09b; -webkit-box-shadow: 0 0 40px #f9e5ad; }
+    100% { background-color: #532405; -webkit-box-shadow: 0 0 3px #ffffff; }
+  }
+  
+  @-moz-keyframes glowing {
+    0% { background-color: #532405; -moz-box-shadow: 0 0 3px #ffffff; }
+    50% { background-color: #cbc09b; -moz-box-shadow: 0 0 40px #f9e5ad; }
+    100% { background-color: #532405; -moz-box-shadow: 0 0 3px #ffffff; }
+  }
+  
+  @-o-keyframes glowing {
+    0% { background-color: #532405; box-shadow: 0 0 3px #ffffff; }
+    50% { background-color: #cbc09b; box-shadow: 0 0 40px #f9e5ad; }
+    100% { background-color: #532405; box-shadow: 0 0 3px #ffffff; }
+  }
+  
+  @keyframes glowing {
+    0% { background-color: #532405; box-shadow: 0 0 3px #ffffff; }
+    50% { background-color: #cbc09b; box-shadow: 0 0 40px #f9e5ad; }
+    100% { background-color: #532405; box-shadow: 0 0 3px #ffffff; }
+  }
 
 /*Nav home*/
 #mission
@@ -130,7 +156,7 @@
     justify-self: center;
     margin: 0 auto;
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(27, 23, 23, 0.199), rgba(26, 24, 22, 0.603)),
+    background-image: linear-gradient(to top left, rgba(27, 23, 23, 0.199), rgba(173, 128, 96, 0.705)),
     url('/images/hero-2.JPG');
     z-index: 4;
     width: 100%;
@@ -149,7 +175,7 @@
 .main__content h2{
     font-size: 6rem;
     background-size: 100%;
-    color: #d6b27c;
+    color: #f3dbc7;
 }
 
 .main__content p{
@@ -190,7 +216,7 @@
     width: 0;
     height: 100%;
     background-color: #db9b60;
-    transition: all 0.35s;
+    transition: all ease-in-out 0.35s;
     border-radius: 4px;
 }
 
@@ -223,6 +249,11 @@
         background-size: 100%;
         color: #d6b27c;
     }
+    .logo__container{
+        width: 150px;
+        left: 10%;
+    }
+    
 }
 
 
