@@ -195,7 +195,7 @@
     color: #fff;
     cursor: pointer;
     position: relative;
-    transition: all 0.35s;
+    transition: all 0.5s;
     outline: none;
     margin-top: 25px;
     font-weight: bold;
@@ -216,7 +216,7 @@
     width: 0;
     height: 100%;
     background-color: #db9b60;
-    transition: all ease-in-out 0.35s;
+    transition: all ease 0.5s;
     border-radius: 4px;
 }
 
@@ -333,10 +333,10 @@
 }
 
 .feature-icon .fa{
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    line-height: 50px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 28px;
     border-radius: 8px;
     color: #3f2207;
     border: 1px solid #3f2207;
