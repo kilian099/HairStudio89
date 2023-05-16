@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Pacifico&display=swap" rel="stylesheet">
+    <!--Scroll Smooth-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
   </head>
   <body>
     <!--Hero Page-->
@@ -31,6 +33,9 @@
             </li>
             <li class="navbar__item">
               <a href="#services" class="navbar__links">Services</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#testimonials_tag" class="navbar__links">Testimonials</a>
             </li>
             <li class="navbar__item">
               <a href="#meet-team" class="navbar__links">Meet Team</a>
@@ -67,7 +72,7 @@
 
     <!--Features-->
     <div id="feature">
-      <div class="title-text">
+      <div class="title-text" id="mission">
         <p>Our mission</p>
         <h1>Why choose Hair Studio 89?</h1>
       </div>
@@ -95,7 +100,7 @@
         <h1>Unmatched experience</h1>
         <div class="features-desc">
           <div class="feature-icon">
-            <i class="fa fa-genderless"></i>
+            <i class="fa fa-exchange"></i>
           </div>
           <div class="feature-text">
             <p>We are dedicated to creating an unforgettable hair experience for every client.</p>
@@ -104,7 +109,7 @@
         <h1>Enviable shine</h1>
         <div class="features-desc">
           <div class="feature-icon">
-            <i class="fa fa-genderless"></i>
+            <i class="fa fa-spinner"></i>
           </div>
           <div class="feature-text">
             <p>Our salon only uses the best and most natural products to ensure that your hair shines.</p>
@@ -113,7 +118,7 @@
         <h1>Relaxing environment</h1>
         <div class="features-desc">
           <div class="feature-icon">
-            <i class="fa fa-genderless"></i>
+            <i class="fa fa-renren"></i>
           </div>
           <div class="feature-text">
             <p>We believe in creating a welcoming and relaxing environment where you can unwind and enjoy your hair experience.</p>
@@ -122,7 +127,7 @@
         <h1>Talented creatives</h1>
         <div class="features-desc">
           <div class="feature-icon">
-            <i class="fa fa-genderless"></i>
+            <i class="fa fa-creative-commons"></i>
           </div>
           <div class="feature-text">
             <p>Our team is made up of highly skilled and talented creatives who are passionate about their craft.</p>
@@ -131,7 +136,7 @@
         <h1>Quality hair</h1>
         <div class="features-desc">
           <div class="feature-icon">
-            <i class="fa fa-genderless"></i>
+            <i class="fa fa-handshake-o"></i>
           </div>
           <div class="feature-text">
             <p>We understand that your hair is an extension of your personal style and identity, which is why we use only the best products to ensure your hair stays healthy and strong.</p>
@@ -143,12 +148,140 @@
         <img src="/images/service-hair.jpg" alt="service-hair">
       </div>
     </div>
+
+    <!--Services-->
+    <div class="services" id="services">
+      <div class="title-text">
+        <p>Our Services</p>
+        <h1>Enjoy the experience</h1>
+      </div>
+      <div class="service-box">
+        <div class="single-service">
+          <img src="/images/balayage.jpg" alt="balayage">
+          <div class="overlay"></div>
+          <div class="service-desc">
+            <h3>Balayage</h3>
+            <hr>
+            <p>Achieve a natural, sun-kissed look with our expert balayage service. Our skilled colourists use freehand painting techniques to create a customized and effortless look that complements your unique style. </p>
+          </div>
+        </div>
+        <div class="single-service">
+          <img src="/images/hair-treatment.jpg" alt="Hair treatment">
+          <div class="overlay"></div>
+          <div class="service-desc">
+            <h3>Protein Treatment</h3>
+            <hr>
+            <p>Transform your hair from dull and damaged to strong and lustrous with the power of protein treatment.</p>
+          </div>
+        </div>
+        <div class="single-service">
+          <img src="/images/hair-styling.jpg" alt="Hair Styling">
+          <div class="overlay"></div>
+          <div class="service-desc">
+            <h3>Hair Styling</h3>
+            <hr>
+            <p>Experience the ultimate hair transformation with our hair styling service. Our skilled stylists use the latest techniques and high-quality products to create a look that perfectly suits your style and personality. From sleek and straight to voluminous curls, we'll help you achieve a stunning new look that you'll love.
+            </p>
+          </div>
+        </div>
+        <div class="single-service">
+          <img src="/images/hair-botox.webp" alt="hair-botox">
+          <div class="overlay"></div>
+          <div class="service-desc">
+            <h3>Hair Botox</h3>
+            <hr>
+            <p>Say goodbye to damaged, frizzy hair with our hair botox service. Our nourishing treatment injects natural proteins and vitamins into your hair to restore its health, strength, and shine. Walk out of our salon with revitalized, silky-smooth hair that's full of life and vibrancy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <footer class="footer mt-auto py-3 bg-dark">
+    <!--Testimonials-->
+    <div class="testimonials" id="testimonials_tag">
+      <div class="title-text">
+        <p>Testimonials</p>
+        <h1>What Client Says</h1>
+      </div>
+      <div class='sk-ww-google-reviews' data-embed-id='143244'></div>
+      
+    </div>
+
+    <!--Our Team-->
+    <div class="our__team" id="meet-team">
+      <div class="title-text">
+        <p>Meet Our Team</p>
+        <h1>Get To Know Us</h1>
+      </div>
+      <div class="our__team-box">
+        <div class="our__team-desc">
+          <h1>Araceli & Daniel</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Quod saepe a quae perspiciatis iste porro, minima fuga enim nobis veniam quas dolorem quam. 
+            Magni, laboriosam. In beatae dolores illo perferendis.</p>
+        </div>
+        <div class="our__team-img">
+          <img src="/images/team.jpg" alt="team">
+        </div>
+      </div>
+    </div>
+
+    <!--Our Brands-->
+    <div class="our__brands" id="brands">
+      <div class="title-text">
+        <p>Our Brands</p>
+        <h1>Powered By..</h1>
+      </div>
+      <div class="branding">
+
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+      <img src="/images/hs89-logo.jpg" alt="HairStudio89 Logo" class="footer-img">
+      <div class="title-text">
+        <p>CONTACT</p>
+        <h1>Visit Our Hair Salon Today</h1>
+      </div>
+      <div class="footer-row">
+        <div class="footer-left">
+          <h1>Opening Hours</h1>
+          <p><i class="fa fa-clock-o"></i>Monday - 12 pm to 6pm</p>
+          <p><i class="fa fa-clock-o"></i>Tuesday to Friday - 10 am to 8pm</p>
+          <p><i class="fa fa-clock-o"></i>Saturday - 9 am to 6pm</p>
+        </div>
+        <div class="footer-right">
+          <h1>Get In Touch</h1>
+          <p>63 Lupus Street, Pimlico, London, SW1V 3EY <i class="fa fa-map-marker"></i></p>
+          <p>booking@hairstudio89.co.uk <i class="fa fa-paper-plane"></i></p>
+          <p> 07549 365189 <i class="fa fa-whatsapp"></i></p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+    </div>
+
+
+    <footer class="footer__bottom">
       <div class="container">
-        <span class="text-light">Designed & Developed by <a href="https://kp-design.co.uk">KP Designs</a> - All Rights Reserved <i class="fa fa-copyright" aria-hidden="true">&copy;</i> 2023</span>
+        <span class="text-light">Designed & Developed by <a href="https://kp-design.co.uk" target="_blank">KP Designs</a> - All Rights Reserved <i class="fa fa-copyright" aria-hidden="true">&copy;</i>2023 - Hair Studio 89 </span>
       </div>
     </footer>
+    
+    <!--Scripts-->
+
     <script src="/backend/js/menu.js"></script>
+    <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+    <script>
+      // All animations will take exactly 500ms
+        var scroll = new SmoothScroll('a[href*="#"]', {
+	      speed: 1000,
+	      speedAsDuration: true
+      });
+    </script>
   </body>
 </html>
