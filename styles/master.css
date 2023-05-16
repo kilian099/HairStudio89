@@ -446,6 +446,9 @@ hr{
 }
 
 @media screen and (max-width:770px){
+    .services{
+        margin-top: 20px;
+    }
     .single-service{
         flex-basis: 100%;
         margin-bottom: 40px;
@@ -467,21 +470,72 @@ hr{
     width: 100%;
     padding: 70px 0;
 }
-
-.our__team{
-    width: 100%;
-    padding: 70px 0;
-}
-
+/*---Our Brands----*/
 .our__brands{
     width: 100%;
     padding: 70px 0;
 }
 
+.branding-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.branding-col{
+    flex-basis: 45%;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #3f22076b;
+    cursor: pointer;
+}
+.branding-col p{
+    font-size: 14px;
+    transition: transform .5s;
+} 
+
+.logo__brand{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.logo__brand img{
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 3px ;
+}
+
+.logo__name .fa{
+    margin-left: 10px;
+    color: #532405;
+    font-size: 20px;
+}
+
+.logo__name small a{
+    color: #532405;
+    text-decoration: none;
+}
+
+.branding-col:hover{
+    transform: translateY(-7px);
+}
+
+@media screen and (max-width:770px){
+    .branding-col{
+        flex-basis: 100%;
+    }
+}
 /*Our Team*/
 
 .our__team{
     background: #dad5c4d0;
+    width: 100%;
+    padding: 70px 0;
 }
 
 .our__team-box{
@@ -512,7 +566,7 @@ hr{
     }
     .our__team-desc {
         flex-basis: 100%;
-        margin: auto;
+        margin-bottom: 40px;
     }
     .our__team-img{
         flex-basis: 100%;
