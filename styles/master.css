@@ -157,7 +157,7 @@
     margin: 0 auto;
     height: 100vh;
     background-image: linear-gradient(to top left, rgba(27, 23, 23, 0.199), rgba(173, 128, 96, 0.705)),
-    url('/images/hero-2.JPG');
+    url('../images/hero-2.JPG');
     z-index: 4;
     width: 100%;
     background-size: cover;
