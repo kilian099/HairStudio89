@@ -74,8 +74,117 @@
     flex-basis: 50%;
 }
 
+.contact-us__details img{
+    width:70%;
+    border-radius: 10px;
+}
 .contact-us__form{
     flex-basis: 50%;
     margin: auto;
 }
 
+.contact-us__form ul{
+    margin: 20px;
+    padding-left: 100px;
+}
+.contact-us__form li{
+    list-style: none;
+    text-align: left;
+    line-height: 2rem;
+    font-size: 20px;
+}
+
+li .fa{
+    padding-right: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: #33250f;
+}
+
+.contact-us__form form{
+    max-width: 500px;
+    width: 90%;
+    background: white;
+    margin: 17vh auto 0 auto;
+    padding: 40px ;
+}
+
+.contact-us__form h1{
+    margin: 0;
+    text-align: center;
+    margin: 15px;
+}
+
+.contact-us__form label{
+    display: block;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.contact-us__form textarea, .contact-us__form input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #b8863d;
+}
+
+.contact-us__form input[type=text]:focus, .contact-us__form textarea:focus{
+    border-bottom: 1px solid #b8863d;
+}
+
+.contact-us__form textarea::-webkit-scrollbar{
+    width: 4px;
+}
+
+.contact-us__form textarea::-webkit-scrollbar-thumb{
+    background-color: #b8863d;
+}
+
+.contact-us__form .btn__center{
+    text-align: center;
+}
+
+.btn__center input[type="submit"] {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 200px;
+    background: linear-gradient(to right, rgb(158, 97, 39), rgb(71, 44, 19));
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.error{
+    color: red;
+}
+
+.error-border{
+    border-bottom: 1px solid red;
+}
+
+#success{
+    color: rgb(15, 153, 15);
+    
+}
+
+
+@media screen and (max-width:770px){
+    .contact-us__box h2{
+        font-size: 35;
+    }
+    .contact-us_form {
+        flex-basis: 100%;
+    }
+    .contact-us__details{
+        flex-basis: 100%;
+    }
+    .contact-us__details img{
+        width: 100%;
+        position: relative;
+    }
+}

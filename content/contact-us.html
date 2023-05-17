@@ -67,16 +67,40 @@
         <h1>Where to find Us?</h1>
       </div>
       <div class="contact-us__box">
-        <!--Details Hair Studio 89-->
-        <div class="contact-us__details">
-          <img src="../images/" alt="hair-studio-89">
-        </div>
         <!--Contact Form-->
         <div class="contact-us__form">
-          <form action="" method="post">
+          <form onsubmit="event.preventDefault(); validateForm()">
+            <h1>Send us a message</h1>
 
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+            <small class = "error"></small>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Your Email">
+            <small class = "error"></small>
+
+            <label for="name">Message:</label>
+            <textarea id="message" placeholder="How can we help?" rows="6"></textarea>
+            <small class = "error"></small>
+
+            <div class="btn__center">
+              <input type="submit" value="Send Message">
+              <p id="success">Success !</p>
+            </div>
           </form>
+          <!--Details Hair Studio 89-->
+          <ul>
+            <li><i class="fa fa-map-marker"></i>63 Lupus Street, Pimlico, London, SW1V 3EY </li>
+            <li><i class="fa fa-paper-plane"></i> booking@hairstudio89.co.uk </li>
+            <li><i class="fa fa-whatsapp"></i> 07549 365189 </li>
+          </ul>
         </div>
+        
+        <div class="contact-us__details">
+          <img src="../images/hair-studio-89.jpg" alt="hair-studio-89">
+        </div>
+        
       </div>
     </div>
 
@@ -160,7 +184,7 @@
     <!--Scripts-->
 
     <script src="../backend/js/menu.js"></script>
-    <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+    <script src="../backend/js/form.js"></script>
     <script>
       // All animations will take exactly 500ms
         var scroll = new SmoothScroll('a[href*="#"]', {
