@@ -550,7 +550,13 @@ hr{
     flex-basis: 50%;
     margin: auto;
 }
-
+.our__team-desc h1{
+    margin-top: 40px;
+    text-align: left;
+}
+.our__team-desc p{
+    text-align: left;
+}
 .our__team-img{
     flex-basis: 50%;
 }
@@ -646,7 +652,7 @@ hr{
     transition:.5s;
 }
 
-.social-links:hover .fa{
+.social-links .fa:hover{
     border: #000000 solid 1px;
     color: #000000;
     transform: translateY(-7px);
