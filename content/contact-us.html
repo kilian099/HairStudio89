@@ -21,7 +21,6 @@
     <!--Scroll Smooth-->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <!--Form script email sent-->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -79,7 +78,7 @@
       <div class="contact-us__box">
         <!--Contact Form-->
         <div class="contact-us__form">
-          <form action="?" method="POST" onsubmit="event.preventDefault(); validateForm(); sendMail()">
+          <form onsubmit="event.preventDefault(); validateForm(); sendMail()">
             <h1>Send us a message</h1>
 
             <label for="name">Name:</label>
@@ -93,8 +92,8 @@
             <label for="name">Message:</label>
             <textarea id="message" placeholder="How can we help?" rows="6"></textarea>
             <small class = "error"></small>
-          </br>
-            <div class="g-recaptcha" data-sitekey="6LdSVR0mAAAAAF6sw1BlvTxWTvXeEOn60ZdDdtqb"></div>
+          
+            
             <div class="btn__center">
               <input type="submit" value="Send Message">
               <p id="success"></p>
