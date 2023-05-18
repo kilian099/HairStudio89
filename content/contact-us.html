@@ -20,6 +20,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Pacifico&display=swap" rel="stylesheet">
     <!--Scroll Smooth-->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!--Form script email sent-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("b7XgYQvLEbiNiOIuc");
+        })();
+    </script>
   </head>
   <body>
     <!--Hero Page-->
@@ -69,7 +79,7 @@
       <div class="contact-us__box">
         <!--Contact Form-->
         <div class="contact-us__form">
-          <form action="https://formsubmit.co/sysadmin@kobu-smart.co.uk" method="POST" onsubmit="event.preventDefault(); validateForm()">
+          <form onsubmit="event.preventDefault(); validateForm(); sendMail()">
             <h1>Send us a message</h1>
 
             <label for="name">Name:</label>
@@ -83,7 +93,8 @@
             <label for="name">Message:</label>
             <textarea id="message" placeholder="How can we help?" rows="6"></textarea>
             <small class = "error"></small>
-
+          </br>
+            <div class="g-recaptcha" data-sitekey="6LdSVR0mAAAAAF6sw1BlvTxWTvXeEOn60ZdDdtqb"></div>
             <div class="btn__center">
               <input type="submit" value="Send Message">
               <p id="success"></p>
@@ -185,6 +196,7 @@
 
     <script src="../backend/js/menu.js"></script>
     <script src="../backend/js/form.js"></script>
+    <script src="../backend/js/form-sent.js"></script>
     <script>
       // All animations will take exactly 500ms
         var scroll = new SmoothScroll('a[href*="#"]', {
