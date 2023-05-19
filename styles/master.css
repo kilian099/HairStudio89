@@ -113,34 +113,30 @@
 }
 
 @-webkit-keyframes glowing {
-    0% { background-color: #532405; -webkit-box-shadow: 0 0 3px #ffffff; }
-    50% { background-color: #cbc09b; -webkit-box-shadow: 0 0 40px #f9e5ad; }
-    100% { background-color: #532405; -webkit-box-shadow: 0 0 3px #ffffff; }
+    0% { background-color: #532405; -webkit-box-shadow: 0 0 3px #532405; }
+    50% {  -webkit-box-shadow: 0 0 15px #ddcabd  }
+    100% { background-color: #532405; -webkit-box-shadow: 0 0 3px #532405; }
   }
   
   @-moz-keyframes glowing {
-    0% { background-color: #532405; -moz-box-shadow: 0 0 3px #ffffff; }
-    50% { background-color: #cbc09b; -moz-box-shadow: 0 0 40px #f9e5ad; }
-    100% { background-color: #532405; -moz-box-shadow: 0 0 3px #ffffff; }
+    0% { background-color: #532405; -moz-box-shadow: 0 0 3px #532405; }
+    50% {  -moz-box-shadow: 0 0 15px #ddcabd }
+    100% { background-color: #532405; -moz-box-shadow: 0 0 3px #532405; }
   }
   
   @-o-keyframes glowing {
-    0% { background-color: #532405; box-shadow: 0 0 3px #ffffff; }
-    50% { background-color: #cbc09b; box-shadow: 0 0 40px #f9e5ad; }
-    100% { background-color: #532405; box-shadow: 0 0 3px #ffffff; }
+    0% { background-color: #532405; box-shadow: 0 0 3px #532405; }
+    50% { box-shadow: 0 0 15px #ddcabd }
+    100% { background-color: #532405; box-shadow: 0 0 3px #532405; }
   }
   
   @keyframes glowing {
-    0% { background-color: #532405; box-shadow: 0 0 3px #ffffff; }
-    50% { background-color: #cbc09b; box-shadow: 0 0 40px #f9e5ad; }
-    100% { background-color: #532405; box-shadow: 0 0 3px #ffffff; }
+    0% { background-color: #532405; box-shadow: 0 0 3px #532405; }
+    50% {  box-shadow: 0 0 15px #ddcabd }
+    100% { background-color: #532405; box-shadow: 0 0 3px #532405; }
   }
 
-/*Nav home*/
-#mission
-{
-    transition: all 1s;
-}
+
 
 /*  Hero  Page  */
 
