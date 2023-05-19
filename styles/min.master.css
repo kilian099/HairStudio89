@@ -179,12 +179,38 @@ li .fa{
     }
     .contact-us_form {
         flex-basis: 100%;
+        margin: 5px 0;
+    }
+    .contact-us__form form{
+        width: 100%;
+        background: white;
+        margin: 10px 0;
+        padding: 10px 0;
     }
     .contact-us__details{
         flex-basis: 100%;
     }
     .contact-us__details img{
         width: 100%;
-        position: relative;
+        margin: auto;
+    }
+
+    .contact-us__form label{
+        margin: 5px 0;
+    }
+
+    .contact-us__form ul{
+        margin: 5px;
+        padding: 0;
     }
 }
+
+@media screen and (max-width:280px){
+    .contact-us__form form{
+        width: 100%;
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+}
+
