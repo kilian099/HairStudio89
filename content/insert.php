@@ -1,49 +1,57 @@
 <?php
-    //Select data to send via POST to DB
+if (isset($_POST['submit'])) {
+    if (isset($_POST['username']) && isset($_POST['email'])){
+            //Select data to send via POST to DB
    $name = $_POST['username'];
    $email = $_POST['email'];
    if (!empty($name) || !empty($email)) {
+    
     $host = "localhost";
     $dbUsername = "hair_user";
     $dbPassword = "KobuSmart@123";
     $dbname = "hair_db";
 
-    //Connections to DB
-    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
    
-
-   if (mysqli_connect_error()) {
-        die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
-   } else {
-       $SELECT =  "SELECT email From subscribers Where email = ? Limit 1";
-       $INSERT = "INSERT Into subscribers (username, email) values (?,?)"
-
-        //Prepare Statement
-      $stmt = $conn->prepare($SELECT);
-      $stmt->bind_param("s", $email);
-      $stmt->execute();
-      $stmt->bind_result($email);
-      $stmt->store_result();
-      $rnum = $stmt->num_rows;
-
-        if($rnum==0) {
+    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
+    if ($conn->connect_error) {
+        die('Could not connect to the database.');
+    }
+    else {
+        $Select = "SELECT email FROM register WHERE email = ? LIMIT 1";
+        $Insert = "INSERT INTO subscribers(username, email) values(?, ?)";
+        $stmt = $conn->prepare($Select);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $stmt->bind_result($resultEmail);
+        $stmt->store_result();
+        $stmt->fetch();
+        $rnum = $stmt->num_rows;
+        if ($rnum == 0) {
             $stmt->close();
-
-            $stmt = $conn-prepare($INSERT);
-            $stmt->bind_param("ssssii", $name, $email);
-            $stmt->execute();
-           echo "Thanks for subscribe";
-        } else {
-           echo "This email is already register, please try different email";
+            $stmt = $conn->prepare($Insert);
+            $stmt->bind_param("ssssii",$username, $email);
+            if ($stmt->execute()) {
+                echo "New record inserted sucessfully.";
+            }
+            else {
+                echo $stmt->error;
+            }
         }
-       $stmt->close();
+        else {
+            echo "Someone already registers using this email.";
+        }
+        $stmt->close();
         $conn->close();
-    }else{
-       echo "All fields are required";
-        die();
-   }
-
+    }
+}
+else {
+    echo "All field are required.";
+    die();
 }
 
-  
+else {
+echo "Submit button is not set";
+}
+    }
+}
 ?>
