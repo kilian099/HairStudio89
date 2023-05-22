@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
         }
         else {
             $Select = "SELECT email FROM subscribers WHERE email = ? LIMIT 1";
-            $Insert = "INSERT INTO subscribers(username, email) values(?, ?)";
+            $Insert = "INSERT INTO subscribers(username, email) values(?, ?, ?)";
             $stmt = $conn->prepare($Select);
             $stmt->bind_param("s", $email);
             $stmt->execute();
