@@ -4,7 +4,6 @@ if (isset($_POST['submit'])) {
             //Select data to send via POST to DB
    $name = $_POST['username'];
    $email = $_POST['email'];
-   if (!empty($name) || !empty($email)) {
     
     $host = "localhost";
     $dbUsername = "hair_user";
@@ -17,7 +16,7 @@ if (isset($_POST['submit'])) {
         die('Could not connect to the database.');
     }
     else {
-        $Select = "SELECT email FROM register WHERE email = ? LIMIT 1";
+        $Select = "SELECT email FROM subscribers WHERE email = ? LIMIT 1";
         $Insert = "INSERT INTO subscribers(username, email) values(?, ?)";
         $stmt = $conn->prepare($Select);
         $stmt->bind_param("s", $email);
@@ -52,6 +51,5 @@ else {
 else {
 echo "Submit button is not set";
 }
-    }
 }
 ?>
