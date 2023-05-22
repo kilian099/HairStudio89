@@ -199,6 +199,21 @@
   .hidden {
     display: none;
   }
+  @media screen and (max-width:770px){
+    .modal {
+        width: 80%;
+        min-height: 250px;
+        left: 5%;
+    }
+    .btn-open {
+        position: absolute;
+        bottom: 20px;
+      }
+      .navbar__item{
+        height: 50px;
+    }
+  }
+  
 
 /*  Hero  Page  */
 
