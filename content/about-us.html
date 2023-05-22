@@ -40,7 +40,7 @@
               <a href="../content/contact-us.html" class="navbar__links">Contact Us</a>
             </li>
             <li class="navbar__btn">
-              <a href="#" class="button">Sign Up</a>
+              <button class="btn btn-open">Sign Up</button>
             </li>
           </ul>
         </div>
@@ -171,10 +171,35 @@
         <span class="text-light">Designed & Developed by <a href="https://kp-design.co.uk" target="_blank">KP Designs</a> - All Rights Reserved <i class="fa fa-copyright" aria-hidden="true">&copy;</i>2023 - Hair Studio 89 </span>
       </div>
     </footer>
+
+    <!--Modal/Popup-->
+    <div class="modal hidden">
+      
+        <div class="flex">
+          <img src="../images/hs89-logo.jpg" width="50px" height="50px" alt="logo" />
+          <button class="btn-close">⨉</button>
+        </div>
+        <form action="" method="post">
+        <div>
+          <h3>Stay in touch</h3>
+          <p>
+            By signing, here you will receive the latest content of Hair Studio 89.
+          </p>
+        </div>
+        <input type="name" id="name" placeholder="Your Name" />
+        
+          <input type="email" id="email" placeholder="booking@hairstudio89.co.uk" />
+         
+          <button class="btn">Subscribe Now</button>
+      </form>
+      
+    </div>
+    <div class="overlay2 hidden"></div>
     
     <!--Scripts-->
 
     <script src="../backend/js/menu.js"></script>
+    <script src="../backend/js/modal.js"></script>
     <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
     <script>
       // All animations will take exactly 500ms
