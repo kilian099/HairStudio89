@@ -1,52 +1,31 @@
 <?php
-if (isset($_POST['submit'])) {
-    if (isset($_POST['username']) &&
-        isset($_POST['email'])) {
-        
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $host = "localhost";
-        $dbUsername = "hair_user";
-        $dbPassword = "KobuSmart@123";
-        $dbName = "hair_db";
-        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
-        if ($conn->connect_error) {
-            die('Could not connect to the database.');
-        }
-        else {
-            $Select = "SELECT email FROM subscribers WHERE email = ? LIMIT 1";
-            $Insert = "INSERT INTO subscribers(username, email) values('$username', '$email')";
-            $stmt = $conn->prepare($Select);
-            $stmt->bind_param("s", $email);
-            $stmt->execute();
-            $stmt->bind_result($resultEmail);
-            $stmt->store_result();
-            $stmt->fetch();
-            $rnum = $stmt->num_rows;
-            if ($rnum == 0) {
-                $stmt->close();
-                $stmt = $conn->prepare($Insert);
-                $stmt->bind_param("ssssii",$username, $email);
-                if ($stmt->execute()) {
-                    echo "New record inserted sucessfully.";
-                }
-                else {
-                    echo $stmt->error;
-                }
-            }
-            else {
-                echo "Someone already registers using this email.";
-            }
-            $stmt->close();
-            $conn->close();
-        }
-    }
-    else {
-        echo "All field are required.";
-        die();
-    }
+$name = filter_input(INPUT_POST, "name", FILTER_VALIDATE_BOOL);
+$email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_BOOL);
+
+$host = "localhost";
+$dbname = "hair_db";
+$username = "hair_user";
+$password = "KobuSmart@123";
+
+$conn = mysqli_connect($host, $username, $password, $dbname);
+
+if (mysqli_connect_errno()) {
+    die("Connection error: " . mysqli_connect_error());
 }
-else {
-    echo "Submit button is not set";
+
+$sql = "INSERT INTO subscribers (name, email)
+        VALUES (?, ?, ?, ?)"
+
+$stmt = mysqli_stmt_init($conn);
+
+if ( ! mysqli_stmt_prepare($stmt, $sql)) {
+    die(mysqli_error($conn));
 }
+
+mysqli_stmt_bind_param($stmt, "ss",
+                        $name,
+                        $email);
+mysqli_stmt_execute($stmt); 
+
+echo "Thank you for subscribe, please go back to the page";
 ?>
