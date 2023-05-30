@@ -713,6 +713,30 @@ a.slide__next,
     font-size: 15;
 }
 
+@media screen and (max-width:770px){
+.testimonials 
+.slide {
+    height: 70vh;
+    position: relative;
+}
+
+.testimonials img{
+    bottom: 75%; 
+}
+
+.slides .testi{
+    top: 28%;
+    font-size: 12px;
+}
+
+.slide__text{
+    bottom: -100px;
+    font-size: 10px;
+}
+
+
+}
+
 /*---Our Brands----*/
 .our__brands{
     width: 100%;
