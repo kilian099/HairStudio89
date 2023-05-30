@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Master CSS -->
     <link rel="stylesheet" href="../styles/master.css">
+    <link rel="stylesheet" href="../styles/min.master.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--Google FOnts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Pacifico&display=swap" rel="stylesheet">
     <!--Scroll Smooth-->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  
+  
   </head>
   <body>
     <!--Hero Page-->
@@ -76,7 +80,7 @@
         <p>Our mission</p>
         <h1>Why choose Hair Studio 89?</h1>
       </div>
-    </div>
+    
     <div class="feature__box">
       <div class="features">
         <h1>Genderless and affordable pricing</h1>
@@ -148,7 +152,7 @@
         <img src="../images/danielmatez.jpeg" alt="service-hair">
       </div>
     </div>
-
+  </div>
     <!--Services-->
     <div class="services" id="services">
       <div class="title-text">
@@ -198,15 +202,48 @@
     </div>
     
     <!--Testimonials-->
-    <div class="testimonials" id="testimonials_tag">
-      <div class="title-text">
+<div class="testimonials" id="testimonials_tag">
+      <div class="title-text ">
         <p>Testimonials</p>
         <h1>What Client Says</h1>
       </div>
-      <div class='sk-ww-google-reviews' data-embed-id='143244'></div>
-      
-    </div>
 
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slides">
+            <div id="slides__1" class="slide">
+              <img src="../images/testimonials/Airam.png" alt="Airam">
+              <span class="slide__text">Airam</span>
+              <p>This is just a test</p>
+            </div>
+            <div id="slides__2" class="slide">
+              <span class="slide__text">2</span>
+            </div>
+            <div id="slides__3" class="slide">
+              <span class="slide__text">3</span>
+            </div>
+            <div id="slides__4" class="slide">
+              <span class="slide__text">4</span>
+            </div>
+            <div id="slides__5" class="slide">
+              <span class="slide__text">5</span>
+            </div>
+          </div>
+          <div class="slider__nav">
+            <a class="slider__navlink" href="#slides__1"></a>
+            <a class="slider__navlink" href="#slides__2"></a>
+            <a class="slider__navlink" href="#slides__3"></a>
+            <a class="slider__navlink" href="#slides__4"></a>
+            <a class="slider__navlink" href="#slides__5"></a> 
+        </div>
+        </div>
+        
+      </div>
+      
+</div>
+
+      
+      
     <!--Our Team-->
     <div class="our__team" id="meet-team">
       <div class="title-text">
@@ -228,6 +265,7 @@
         </div>
         <div class="our__team-img">
           <img src="../images/team.jpg" alt="team">
+          <img src="../images/Daniel.jpeg" alt="team">
         </div>
       </div>
     </div>
@@ -269,6 +307,35 @@
           </div>
       </div>
     </div>
+
+    <div class="wrapper">
+      <img src="../images/hs89-logo.jpg" alt="logo">
+      <div class="content">
+        <header>Cookies Consent</header>
+        <p>This website use cookies to ensure you get the best experience on our website.</p>
+        <div class="buttons">
+          <button class="item">I understand</button>
+          <a href="../content/cookies.html" class="item">Learn more</a>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      const cookieBox = document.querySelector(".wrapper"),
+      acceptBtn = cookieBox.querySelector("button");
+      acceptBtn.onclick = ()=>{
+        //setting cookie for 1 month, after one month it'll be expired automatically
+        document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
+        if(document.cookie){ //if cookie is set
+          cookieBox.classList.add("hide"); //hide cookie box
+        }else{ //if cookie not set then alert an error
+          alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+        }
+      }
+      let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+      //if cookie is set then hide the cookie box else show it
+      checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+    </script>
 
     <!--Footer-->
     <div class="footer">
@@ -338,7 +405,7 @@
 
     <script src="../backend/js/menu.js"></script>
     <script src="../backend/js/modal.js"></script>
-    <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+    
     <script>
       // All animations will take exactly 500ms
         var scroll = new SmoothScroll('a[href*="#"]', {

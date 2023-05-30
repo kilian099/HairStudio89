@@ -25,5 +25,6 @@ if ( ! mysqli_stmt_prepare($stmt, $sql)) {
 mysqli_stmt_bind_param($stmt, 'ss', $name, $email);
 mysqli_stmt_execute($stmt); 
 
-echo "Thank you for subscribe, please go back to the page";
+//  To redirect form on a particular page
+header("Location:http://127.0.0.1:5500/content/thankyou.html");
 ?>
