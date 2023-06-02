@@ -298,3 +298,32 @@ li .fa{
     
 }
 
+/* Thank You */
+
+.button__back{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__back button{
+    padding: 20px;
+    border-radius: 7px;
+    background-color: #33250f;
+}
+
+.button__back a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.button__back button:hover{
+    padding: 22px;
+    border-radius: 7px;
+    background-color: #c48521;
+    color: #33250f;
+    transition: all .5s;
+}
+
