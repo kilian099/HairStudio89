@@ -716,7 +716,7 @@ a.slide__next,
 @media screen and (max-width:770px){
 .testimonials 
 .slide {
-    height: 70vh;
+    height: 75vh;
     position: relative;
 }
 
@@ -725,15 +725,18 @@ a.slide__next,
 }
 
 .slides .testi{
-    top: 28%;
+    top: 27%;
     font-size: 12px;
 }
 
 .slide__text{
-    bottom: -100px;
+    bottom: -109px;
     font-size: 10px;
 }
 
+.slider__navlink {
+    display: none;
+}
 
 }
 
@@ -835,6 +838,14 @@ a.slide__next,
     border-radius: 10px;
 }
 
+@media screen and (max-width:1368px){
+    .our__team-img img{
+        width: 60%;
+        height: 50vh;
+        
+    }
+}
+
 @media screen and (max-width:770px){
     .our__team-box h1{
         font-size: 35;
@@ -847,7 +858,7 @@ a.slide__next,
         flex-basis: 100%;
     }
     .our__team-img img{
-        width:100%;
+        width:70%;
     }
 }
 
