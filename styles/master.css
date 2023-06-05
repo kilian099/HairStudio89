@@ -475,6 +475,7 @@
 
 .single-service img {
     width:100%;
+    image-resolution: 100%;
     border-radius: 7px;
 }
 .overlay{
