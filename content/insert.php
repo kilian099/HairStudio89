@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Value already exists in the table.";
     } else {
         // Value does not exist, insert it
-        $insertQuery = "INSERT INTO subscribers (name. email) VALUES ('$name', '$email')";
+        $insertQuery = "INSERT INTO subscribers (name, email) VALUES ('$name', '$email')";
 
         if ($conn->query($insertQuery) === TRUE) {
             echo "Data inserted successfully";
