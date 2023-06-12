@@ -568,7 +568,10 @@ hr{
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    
 }
+
+
 .testimonials
 .slides {
     display: flex;
@@ -576,6 +579,7 @@ hr{
     position: relative;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    
 }
 
 .testimonials
@@ -597,6 +601,7 @@ hr{
     transform-origin: center center;
     transform: scale(1);
     scroll-snap-align: center;
+    
 }
 
 .testimonials
@@ -607,6 +612,8 @@ hr{
     position: relative;
     top: 5%;
 }
+
+
 
 .testimonials
 .slide a {
@@ -627,6 +634,8 @@ a.slide__prev {
     left: 5%;
     display: none;
 }
+
+
 
 .testimonials
 a.slide__next{
