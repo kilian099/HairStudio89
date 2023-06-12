@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($conn->query($insertQuery) === TRUE) {
             echo "Data inserted successfully";
             //  To redirect form on a particular page
-            header("Location:http://127.0.0.1:5500/content/thankyou.html");
+            header("Location:http://hairstudio89.co.uk/test/HairStudio89/content/thankyou.html");
         } else {
             echo "Error: " . $insertQuery . "<br>" . $conn->error;
         }
