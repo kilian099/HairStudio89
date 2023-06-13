@@ -523,14 +523,14 @@ hr{
 
 @media screen and (max-width:770px){
     .services{
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .single-service{
         flex-basis: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
     .service-desc p{
-        font-size: 12px;
+        font-size: 10px;
     }
     hr{
         margin: 5px auto;
