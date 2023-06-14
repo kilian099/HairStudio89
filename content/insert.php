@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($result->num_rows > 0) {
         echo "Value already exists in the table.";
+        header("Location:http://hairstudio89.co.uk/home/HairStudio89/content/duplicate.html");
     } else {
         // Value does not exist, insert it
         $insertQuery = "INSERT INTO subscribers (name, email) VALUES ('$name', '$email')";
@@ -34,9 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($conn->query($insertQuery) === TRUE) {
             echo "Data inserted successfully";
             //  To redirect form on a particular page
-            header("Location:http://hairstudio89.co.uk/test/HairStudio89/content/thankyou.html");
+            header("Location:http://hairstudio89.co.uk/home/HairStudio89/content/thankyou.html");
         } else {
             echo "Error: " . $insertQuery . "<br>" . $conn->error;
+            header("Location:http://hairstudio89.co.uk/home/HairStudio89/content/error.html");
         }
     }
 }

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HairStudio89 - Error Message</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to HairStudio89, Your destination for unparalleled hair care and stunning balayage! Our full-service hair studio is dedicated to providing you with an unforgettable experience that will leave you feeling and looking your absolute best.">
+    <meta name="keywords" content="HairStudio89, Hair Stylish, Balayage">
+    <meta name="author" content="Kilian Perez">
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="../styles/master.css">
+    <link rel="stylesheet" href="../styles/min.master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Google FOnts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Pacifico&display=swap" rel="stylesheet">
+    <!--Scroll Smooth-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  </head>
+  <body>
+    
+      
+      <nav id="navbar">
+        <div class="navbar__container">
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="../content/home.html" class="navbar__links">Home</a>
+            </li>
+            
+            <li class="navbar__item">
+              <a href="../content/about-us.html" class="navbar__links">About Us</a>
+            </li>
+            <li class="navbar__item">
+              <a href="../content/contact-us.html" class="navbar__links">Contact Us</a>
+            </li>
+            <li class="navbar__btn">
+              <button class="btn btn-open">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="nav-icon">
+        <img src="../images/menu-icon.png" id="menu">
+      </div>
+    <!--About US-->
+    <div class="about-us" id="about">
+      <div class="title-text">
+        <p>Sorry it seems you have an error</p>
+        <h2>Please, press the next button, to get back to the Homepage and if you experience the same issue. Please, contact to our <a href="mailto:sysadmin@hairstudio89.co.uk">System Administrator</a> </h2>
+      </div>
+
+     <div class="button__back">
+      <button><a href="home.html">Go to Homepage</a></button>
+     </div>
+
+    </div>
+    <!--Our Brands-->
+    <div class="our__brands" id="brands">
+      <div class="title-text">
+        <p>Our Brands</p>
+        <h1>Powered By..</h1>
+      </div>
+      <div class="branding-row">
+          <div class="branding-col">
+            <div class="logo__brand">
+              <img src="../images/olaplex.png" alt="Olaplex">
+              <div class="logo__name">
+                <h4>Olaplex <i class="fa fa-instagram"></i> </h4>
+                <small><a href="https://www.instagram.com/olaplexuk/" target="_blank" rel="noopener noreferrer">@Olaplex</a></small>
+              </div>
+            </div>
+            <p>
+
+              Our humble beginnings started in a California garage, and since 2014 have grown exponentially to include millions of fans worldwide. 
+              Our patented technology is continuously changing what is possible for hair!
+            </p>
+          </div>
+          <div class="branding-col">
+            <div class="logo__brand">
+              <img src="../images/om.webp" alt="O&M">
+              <div class="logo__name">
+                <h4>O&M <i class="fa fa-instagram"></i> </h4>
+                <small><a href="https://www.instagram.com/originalmineral_uk/" target="_blank" rel="noopener noreferrer">@originalmineral_uk</a> </small>
+              </div>
+            </div>
+            
+            <p>
+              Our O&M product formulas  replace harsh chemicals with active natural extracts and minerals, 
+              including native Australian ingredients like Lilly Pilly, Banksia Flower, Quandong, Tasmanian Sea Kelp and Davidson Plum, as well as quality essential oils that deliver real benefits.
+            </p>
+          </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+        <img src="../images/hs89-logo.jpg" alt="logo">
+        <div class="content">
+          <header>Cookies Consent</header>
+          <p>This website use cookies to ensure you get the best experience on our website.</p>
+          <div class="buttons">
+            <button class="item">I understand</button>
+            <a href="../content/cookies.html" class="item">Learn more</a>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        const cookieBox = document.querySelector(".wrapper"),
+        acceptBtn = cookieBox.querySelector("button");
+        acceptBtn.onclick = ()=>{
+          //setting cookie for 1 month, after one month it'll be expired automatically
+          document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
+          if(document.cookie){ //if cookie is set
+            cookieBox.classList.add("hide"); //hide cookie box
+          }else{ //if cookie not set then alert an error
+            alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+          }
+        }
+        let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+        //if cookie is set then hide the cookie box else show it
+        checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+      </script>
+    <!--Footer-->
+    <div class="footer">
+      <img src="../images/hs89-logo.jpg" alt="HairStudio89 Logo" class="footer-img">
+      <div class="title-text">
+        <p>CONTACT</p>
+        <h1>Visit Our Hair Salon Today</h1>
+      </div>
+      <div class="footer-row">
+        <div class="footer-left">
+          <h1>Opening Hours</h1>
+          <p><i class="fa fa-clock-o"></i>Monday - 12 pm to 6pm</p>
+          <p><i class="fa fa-clock-o"></i>Tuesday to Friday - 10 am to 8pm</p>
+          <p><i class="fa fa-clock-o"></i>Saturday - 9 am to 6pm</p>
+        </div>
+        <div class="footer-right">
+          <h1>Get In Touch</h1>
+          <p>63 Lupus Street, Pimlico, London, SW1V 3EY <i class="fa fa-map-marker"></i></p>
+          <p>booking@hairstudio89.co.uk <i class="fa fa-paper-plane"></i></p>
+          <p> 07549 365189 <i class="fa fa-whatsapp"></i></p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/pages/Hair-Studio-89/116253591460816" target="_blank"> <i class="fa fa-facebook"></i> </a> 
+        <a href="https://www.instagram.com/hairstudio89_/"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+
+
+    <footer class="footer__bottom">
+      <div class="container">
+        <span class="text-light">Designed & Developed by <a href="https://kp-design.co.uk" target="_blank">KP Designs</a> - All Rights Reserved <i class="fa fa-copyright" aria-hidden="true">&copy;</i>2023 - Hair Studio 89 </span>
+      </div>
+    </footer>
+
+    <!--Modal/Popup-->
+    <div class="modal hidden">
+
+        <div class="flex">
+          <img src="../images/hs89-logo.jpg" width="50px" height="50px" alt="logo" />
+          <button class="btn-close">⨉</button>
+        </div>
+
+        <div>
+          <h3>Stay in touch</h3>
+          <p>
+            By signing, here you will receive the latest content of Hair Studio 89.
+          </p>
+        </div>
+
+        <form action="insert.php" method="POST">
+          <input type="name" id="name" placeholder="Your Name" name="name" required>
+
+          <input type="email" id="email" placeholder="booking@hairstudio89.co.uk" name="email" value="email" required>
+
+          <button class="btn" value="submit" name="submit">Subscribe Now</button>
+        </form>
+
+
+    </div>
+
+
+    <div class="overlay2 hidden"></div>
+    
+    <!--Scripts-->
+
+    <script src="../backend/js/menu.js"></script>
+    <script src="../backend/js/modal.js"></script>
+    <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+    <script>
+      // All animations will take exactly 500ms
+        var scroll = new SmoothScroll('a[href*="#"]', {
+	      speed: 1000,
+	      speedAsDuration: true
+      });
+    </script>
+  </body>
+</html>
