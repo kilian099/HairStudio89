@@ -724,6 +724,8 @@ a.slide__next,
     font-size: 15;
 }
 
+.testi{ top: 70%;} /*Correcting space between review and title*/
+
 @media screen and (max-width:770px){
 .testimonials 
 .slide {
