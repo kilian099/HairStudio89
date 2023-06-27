@@ -153,6 +153,31 @@
     text-align: center;
 }
 
+.message{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.message .message_img{
+    flex-basis: 25%;
+}
+
+.message .message_text{
+    flex-basis: 70%;
+}
+
+.logo_pet{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    
+}
+
+
 .contact-us__details{
     flex-basis: 50%;
 }
@@ -285,6 +310,16 @@ li .fa{
     .contact-us__form ul{
         margin: 5px;
         padding: 0;
+    }
+    .message{
+        width: 50%;
+    }
+    .message .message_img{
+        flex-basis: 100%;
+    }
+    
+    .message .message_text{
+        flex-basis: 100%;
     }
 }
 
